@@ -40,4 +40,5 @@ return {
       require('telescope').load_extension 'undo'
     end,
   },
+  'ThePrimeagen/vim-be-good',
 }
