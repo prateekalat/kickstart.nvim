@@ -103,4 +103,5 @@ return {
     end,
   },
   { 'windwp/nvim-ts-autotag', opts = { enable = true } },
+  { 'tpope/vim-fugitive', cmd = { 'G', 'Git' } },
 }
