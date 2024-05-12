@@ -162,9 +162,19 @@ vim.opt.virtualedit = 'block'
 -- Add keymaps to move a line up/down
 vim.keymap.set({ 'n', 'i' }, '<A-j>', function()
   vim.cmd.move '+1'
+  -- Use <C-o> to execute in normal mode and then return
+  -- to insert mode
+  if vim.api.nvim_get_mode().mode == 'i' then
+    vim.api.nvim_input '<C-o>'
+  end
+  vim.api.nvim_input '=='
 end, { desc = 'Move line down' })
 vim.keymap.set({ 'n', 'i' }, '<A-k>', function()
   vim.cmd.move '-2'
+  if vim.api.nvim_get_mode().mode == 'i' then
+    vim.api.nvim_input '<C-o>'
+  end
+  vim.api.nvim_input '=='
 end, { desc = 'Move line up' })
 
 -- [[ Basic Keymaps ]]
