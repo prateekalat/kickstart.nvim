@@ -155,6 +155,10 @@ vim.opt.cursorline = true
 -- Set to 999 to keep the curso in the center
 vim.opt.scrolloff = 999
 
+-- Set virtualedit to true in visual block mode
+-- This lets you select past a line end
+vim.opt.virtualedit = 'block'
+
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
 
