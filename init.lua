@@ -159,6 +159,14 @@ vim.opt.scrolloff = 999
 -- This lets you select past a line end
 vim.opt.virtualedit = 'block'
 
+-- Add keymaps to move a line up/down
+vim.keymap.set({ 'n', 'i' }, '<A-j>', function()
+  vim.cmd.move '+1'
+end, { desc = 'Move line down' })
+vim.keymap.set({ 'n', 'i' }, '<A-k>', function()
+  vim.cmd.move '-2'
+end, { desc = 'Move line up' })
+
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
 
