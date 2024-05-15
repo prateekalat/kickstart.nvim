@@ -104,4 +104,16 @@ return {
   },
   { 'windwp/nvim-ts-autotag', opts = { enable = true } },
   { 'tpope/vim-fugitive', cmd = { 'G', 'Git' } },
+  {
+    'stevearc/oil.nvim',
+    opts = {},
+    -- Optional dependencies
+    dependencies = { 'nvim-tree/nvim-web-devicons' },
+    config = function()
+      require('oil').setup()
+      vim.keymap.set('n', '-', function()
+        vim.cmd 'Oil'
+      end, { desc = 'Open parent directory' })
+    end,
+  },
 }
