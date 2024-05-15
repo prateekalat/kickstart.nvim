@@ -116,4 +116,13 @@ return {
       end, { desc = 'Open parent directory' })
     end,
   },
+  {
+    'ggandor/leap.nvim',
+    config = function()
+      vim.keymap.set('n', 't', '<Plug>(leap)')
+      vim.keymap.set('n', 'T', '<Plug>(leap-from-window)')
+      vim.keymap.set({ 'x', 'o' }, 't', '<Plug>(leap-forward)')
+      vim.keymap.set({ 'x', 'o' }, 'T', '<Plug>(leap-backward)')
+    end,
+  },
 }
