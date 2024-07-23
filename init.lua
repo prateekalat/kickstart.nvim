@@ -616,6 +616,7 @@ require('lazy').setup({
             },
           },
         },
+        zls = {},
       }
 
       -- Ensure the servers and tools above are installed
