@@ -159,6 +159,9 @@ vim.opt.scrolloff = 999
 -- This lets you select past a line end
 vim.opt.virtualedit = 'block'
 
+-- Disable word wrapping
+vim.opt.wrap = false
+
 -- Add keymaps to move a line up/down
 vim.keymap.set({ 'n', 'i' }, '<A-j>', function()
   vim.cmd.move '+1'
@@ -617,6 +620,7 @@ require('lazy').setup({
           },
         },
         zls = {},
+        clangd = {},
       }
 
       -- Ensure the servers and tools above are installed
